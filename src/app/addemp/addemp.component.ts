@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from  '@angular/common/http'
 
+
 @Component({
   selector: 'app-addemp',
   templateUrl: './addemp.component.html',
@@ -15,6 +16,7 @@ export class AddempComponent implements OnInit {
 
   adddata(frm)
   {
+
      var obj =  new  FormData()
      obj.set("email",frm.value.email);
      obj.set("password",frm.value.password);
