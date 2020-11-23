@@ -9,6 +9,7 @@ import { RegComponent } from './reg/reg.component';
 import { AddempComponent } from './addemp/addemp.component';
 import { ContinerComponent } from './continer/continer.component';
 import { ReactFormComponent } from './react-form/react-form.component';
+import { StorageServiceModule } from 'ngx-webstorage-service';
 
 const app :Routes = [{path:'',component:LoginComponent},{path:'login',component:LoginComponent},{path:'master',component:AppComponent,children:[{path:'reactive',component :ReactFormComponent},{path:'',component:AddempComponent},{path:'addemp',component:AddempComponent}]},{path:'reg',component:RegComponent}]
 @NgModule({
@@ -25,7 +26,8 @@ const app :Routes = [{path:'',component:LoginComponent},{path:'login',component:
     RouterModule.forRoot(app),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StorageServiceModule 
   ],
   providers: [],
   bootstrap: [ContinerComponent]
